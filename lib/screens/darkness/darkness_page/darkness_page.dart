@@ -37,7 +37,7 @@ class DarknessPage extends ModalRoute {
       backgroundColor: Colors.black,
       body: GestureDetector(
           onHorizontalDragEnd: (details) {
-            if (details.velocity.pixelsPerSecond.dx < 0) {
+            if (details.velocity.pixelsPerSecond.dx > 0) {
               Navigator.of(context).pop();
             }
           },

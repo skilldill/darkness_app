@@ -3,6 +3,7 @@ import 'package:darkness/screens/darkness/darkness_link.dart';
 import 'package:darkness/screens/profile/profile_screen.dart';
 import 'package:darkness/screens/settings/settings_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class DarknessScreen extends StatefulWidget {
   const DarknessScreen({Key? key}) : super(key: key);
@@ -19,7 +20,7 @@ class _DarknessScreenState extends State<DarknessScreen>
   @override
   void initState() {
     super.initState();
-
+    SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
     linkAnimationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 1000));
 
@@ -63,8 +64,8 @@ class _DarknessScreenState extends State<DarknessScreen>
                         to: const ProfileScreen(),
                         text: "PROFILE",
                         figure: Container(
-                          width: 300,
-                          height: 300,
+                          width: 200,
+                          height: 200,
                           decoration: BoxDecoration(
                               gradient: const LinearGradient(
                                 begin: Alignment.topRight,
@@ -83,8 +84,8 @@ class _DarknessScreenState extends State<DarknessScreen>
                         figure: Transform.rotate(
                           angle: 60,
                           child: Container(
-                            width: 300,
-                            height: 300,
+                            width: 200,
+                            height: 200,
                             decoration: const BoxDecoration(
                               gradient: LinearGradient(
                                 begin: Alignment.topRight,
@@ -104,7 +105,7 @@ class _DarknessScreenState extends State<DarknessScreen>
                         figure: Text(
                           "#",
                           style: TextStyle(
-                              fontSize: 400,
+                              fontSize: 300,
                               fontWeight: FontWeight.bold,
                               foreground: Paint()
                                 ..shader = const LinearGradient(colors: [
