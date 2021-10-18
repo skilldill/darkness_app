@@ -5,12 +5,51 @@ class SettingsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor: Colors.black,
-      body: Text(
-        "Settings",
-        style: TextStyle(color: Colors.white, fontSize: 70),
-      ),
-    );
+    return Scaffold(
+        backgroundColor: Colors.black,
+        body: Stack(
+          children: [
+            Positioned(
+                top: 70,
+                right: -400,
+                child: Opacity(
+                  opacity: 0.25,
+                  child: Container(
+                    height: 600,
+                    width: 600,
+                    decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                            colors: [Colors.red, Colors.blue])),
+                    child: Center(
+                      child: Container(
+                        height: 590,
+                        width: 590,
+                        decoration: BoxDecoration(color: Colors.black),
+                      ),
+                    ),
+                  ),
+                )),
+            Positioned(
+                bottom: 70,
+                left: -700,
+                child: Opacity(
+                  opacity: 0.3,
+                  child: Container(
+                    height: 1000,
+                    width: 1000,
+                    decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                            colors: [Colors.red, Colors.blue])),
+                    child: Center(
+                      child: Container(
+                        height: 890,
+                        width: 890,
+                        decoration: BoxDecoration(color: Colors.black),
+                      ),
+                    ),
+                  ),
+                ))
+          ],
+        ));
   }
 }

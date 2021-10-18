@@ -13,7 +13,7 @@ class ProfileScreen extends StatelessWidget {
                 top: 70,
                 right: -400,
                 child: Opacity(
-                  opacity: 0.2,
+                  opacity: 0.5,
                   child: Container(
                     height: 600,
                     width: 600,
