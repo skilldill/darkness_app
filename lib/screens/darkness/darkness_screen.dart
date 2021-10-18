@@ -105,14 +105,16 @@ class _DarknessScreenState extends State<DarknessScreen>
                         figure: Text(
                           "#",
                           style: TextStyle(
-                              fontSize: 300,
+                              fontSize: 350,
+                              height: 0.8,
                               fontWeight: FontWeight.bold,
                               foreground: Paint()
                                 ..shader = const LinearGradient(colors: [
                                   Colors.red,
                                   Colors.blue,
                                 ]).createShader(Rect.fromCircle(
-                                    center: Offset(250, 150), radius: 400))),
+                                    center: const Offset(250, 150),
+                                    radius: 400))),
                         )),
                   ],
                 )

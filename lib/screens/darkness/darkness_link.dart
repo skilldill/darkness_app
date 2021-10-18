@@ -22,14 +22,14 @@ class DarknessLink extends AnimatedWidget {
     return GestureDetector(
       onTap: () => Navigator.of(context).push(DarknessPage(child: to)),
       child: SizedBox(
-        height: MediaQuery.of(context).size.height / 3.2,
+        height: MediaQuery.of(context).size.height / 3.6,
         width: MediaQuery.of(context).size.width - 120,
         child: Stack(
           children: [
             Positioned(
               child: Opacity(opacity: animation.value * 0.01, child: figure),
               right: -50,
-              bottom: -50,
+              top: 50,
             ),
             Positioned(
               top: 100,
