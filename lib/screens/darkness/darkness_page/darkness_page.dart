@@ -32,8 +32,7 @@ class DarknessPage extends ModalRoute {
   @override
   Widget buildPage(BuildContext context, Animation<double> animation,
       Animation<double> secondaryAnimation) {
-    return SafeArea(
-        child: Scaffold(
+    return Scaffold(
       backgroundColor: Colors.black,
       body: GestureDetector(
           onHorizontalDragEnd: (details) {
@@ -42,7 +41,7 @@ class DarknessPage extends ModalRoute {
             }
           },
           child: child),
-    ));
+    );
   }
 
   @override
